@@ -1,0 +1,89 @@
+.header {
+    background: url("../img/background.jpg");
+    @include background-cover;
+//    min-height: 768px;
+    padding: 93px 0 240px 0;
+
+    @include tablet {
+        min-height: 0;
+        padding: 48px 0 90px 0;
+        background-size: auto;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-heading a {
+            @include font(24px,29px,700);
+            color: $white-color;
+            text-decoration: none;
+
+            @include tablet {
+                @include font(18px,22px,500);
+            }
+        }
+
+        &-heading a:hover {
+            color: $brown-color;
+        }
+    
+        &-menu {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-item {
+            list-style: none;
+        }
+
+        &-item a {
+            text-decoration: none;
+            @include font(18px,22px,500);
+            color: $white-color;
+
+            @include tablet {
+                @include font(15px, 18px);
+            }
+        }
+
+        &-item a:hover {
+            color: $brown-color;
+        }
+    }
+
+    &__heading {
+        @include font(64px,78px);
+        color: $white-color;
+        margin: 145px 0 0 0;
+
+        @include tablet {
+            @include font(42px,54px);
+            margin: 90px 0 0 0;
+        }
+    }
+
+    &__subheading {
+        @include font(24px,29px);
+        color: $white-color;
+        margin: 26px 0 106px 0;
+
+        @include tablet {
+            @include font(20px,24px);
+            margin: 10px 0 48px 0;
+        }
+    }
+
+    &__link {
+        @include font(18px,22px);
+        text-decoration: none;
+        color: $white-color;
+    }
+
+    &__link:hover {
+        color: $brown-color;
+    }
+
+}

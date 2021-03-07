@@ -1,0 +1,19 @@
+.about {
+    padding: 93px 0 115px 0;
+
+    @include tablet {
+        padding: 93px 0 46px 0;
+    }
+
+    &__heading {
+        @include font(24px,29px,700);
+        color: $gray-color;
+        margin: 0 0 38px 0;
+    }
+
+    &__text {
+        margin: 38px 0 38px;
+        @include font(18px,30px);
+        color: $gray-color;
+    }
+}

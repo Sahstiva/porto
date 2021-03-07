@@ -1,0 +1,81 @@
+.portfolio {
+    padding: 93px 0 145px 0;
+
+    @include tablet {
+        padding: 93px 0 93px 0;
+    }
+
+    &__heading {
+        @include font(24px,29px,700);
+        color: $gray-color;        
+    }
+
+    &__subheading {
+        @include font(18px,25px);
+        color: $gray-color;
+        margin: 86px 0 0 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 48px 0 0 0;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        @include font(18px,30px);
+        max-width: 350px;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 403px;
+
+            @include tablet {
+                min-height: 200px;
+            }
+
+        }
+        
+            &-icon {
+                margin: 0 14px 0 0;
+            }
+
+            &-icon:hover {
+                color: $brown-color;
+            }
+
+            &-icons {
+                @include tablet {
+                    margin: 0 0 20px 0;
+                }
+            }
+
+    }
+
+    &__images {
+        display: flex;
+        justify-content: space-between;
+        min-width: 635px;
+        min-height: 403px;
+
+        @include tablet {
+            min-width: 100%;
+            min-height: 388px;
+        }
+
+        &-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+    }
+
+}
