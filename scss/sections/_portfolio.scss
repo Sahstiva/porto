@@ -5,15 +5,29 @@
         padding: 93px 0 93px 0;
     }
 
+    @include mobile {
+        padding: 25px 0 25px 0;
+    }
+
     &__heading {
-        @include font(24px,29px,700);
-        color: $gray-color;        
+        @include font(24px, 29px, 700);
+        color: $gray-color;
+
+        @include mobile {
+            text-align: center;
+        }
     }
 
     &__subheading {
-        @include font(18px,25px);
+        @include font(18px, 25px);
         color: $gray-color;
         margin: 86px 0 0 0;
+
+        @include mobile {
+            @include font(14px, 25px);
+            margin: 20px 0 0 0;
+            text-align: center;
+        }
     }
 
     &__wrapper {
@@ -25,11 +39,20 @@
         @include tablet {
             flex-direction: column;
         }
+
+        @include mobile {
+            padding: 20px 0 0 0;
+        }
     }
 
     &__text {
-        @include font(18px,30px);
+        @include font(18px, 30px);
         max-width: 350px;
+
+        @include mobile {
+            @include font(12px, 15px);
+            text-align: justify;
+        }
 
         &-wrapper {
             display: flex;
@@ -41,21 +64,35 @@
                 min-height: 200px;
             }
 
+            @include mobile {
+                min-height: 80px;
+            }
+
         }
-        
-            &-icon {
-                margin: 0 14px 0 0;
+
+        &-icon {
+            margin: 0 14px 0 0;
+
+            @include mobile {
+                font-size: 12px;
             }
 
-            &-icon:hover {
-                color: $brown-color;
+            ;
+        }
+
+        &-icon:hover {
+            color: $brown-color;
+        }
+
+        &-icons {
+            @include tablet {
+                margin: 0 0 20px 0;
             }
 
-            &-icons {
-                @include tablet {
-                    margin: 0 0 20px 0;
-                }
+            @include mobile {
+                margin: 0 0 10px 0;
             }
+        }
 
     }
 
@@ -67,15 +104,41 @@
 
         @include tablet {
             min-width: 100%;
-            min-height: 388px;
+            min-height: 360px;
+        }
+
+        @include mobile {
+            min-width: 308px;
+            min-height: 195px;
+        }
+
+        &-big {
+            height: 59%;
+
+            @include mobile {
+                height: 58%;
+                width: 95%;
+            }
+        }
+
+        &-small {
+            height: 39%;
+
+            @include mobile {
+                height: 36%;
+                width: 95%;
+            }
         }
 
         &-column {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-        }
 
+            @include mobile {
+                max-width: 170px;
+            }
+        }
     }
 
 }

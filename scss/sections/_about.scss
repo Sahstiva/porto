@@ -5,15 +5,33 @@
         padding: 93px 0 46px 0;
     }
 
+    @include mobile {
+        padding: 25px 0 25px 0;
+    }
+
     &__heading {
-        @include font(24px,29px,700);
+        @include font(24px, 29px, 700);
         color: $gray-color;
         margin: 0 0 38px 0;
+
+        @include mobile {
+            text-align: center;
+            margin: 0 0 19px 0;
+        }
+
     }
 
     &__text {
         margin: 38px 0 38px;
-        @include font(18px,30px);
+        @include font(18px, 30px);
         color: $gray-color;
+
+        @include mobile {
+            margin: 19px 0 19px;
+            @include font(12px, 15px);
+            text-align: justify;
+        }
+
+        ;
     }
 }

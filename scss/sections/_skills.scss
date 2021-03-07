@@ -6,10 +6,19 @@
         padding: 93px 0 93px 0;
     }
 
-    &__heading {
-        @include font(24px,29px,700);
-        color: $gray-color;
+    @include mobile {
+        padding: 25px 0 25px 0;
     }
+
+    &__heading {
+        @include font(24px, 29px, 700);
+        color: $gray-color;
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
@@ -17,24 +26,72 @@
         @include tablet {
             flex-direction: column;
         }
+
+        @include mobile {
+            align-items: center;
+        }
     }
+
     &__img {
         margin: 86px 0 0 0;
+
+        @include mobile {
+            margin: 25px 0 0 0;
+            width: 244px;
+            height: 218px;
+        }
     }
 
     &__grid {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        grid-template-rows: 85px repeat(6,45px);
+        grid-template-rows: 85px repeat(6, 45px);
         margin: 86px 0 0 0;
 
+        @include mobile {
+            margin: 25px 0 0 0;
+        }
+
         &-item {
-            @include font(18px,25px,600);
+            @include font(18px, 25px, 600);
             height: 20px;
+
+            @include mobile {
+                @include font(12px, 25px);
+            }
         }
+
+        &-front {
+
+            @include mobile {
+                width: 211px;
+                height: 18px;
+            }
+        }
+
+        &-ui {
+            @include mobile {
+                width: 211px;
+                height: 18px;
+            }
+        }
+
+        &-ux {
+            @include mobile {
+                width: 211px;
+                height: 18px;
+            }
+        }
+
         &-description {
-            @include font(18px,25px);
+            @include font(18px, 25px);
             height: 20px;
+
+            @include mobile {
+                @include font(12px, 25px);
+            }
         }
+
+
     }
 }
