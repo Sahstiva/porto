@@ -1,0 +1,612 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: 'Libre Franklin', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.container {
+  width: 80%;
+  max-width: 1107px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinsemibold.woff2") format("woff2"), url("../fonts/Librefranklinsemibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinmedium.woff2") format("woff2"), url("../fonts/Librefranklinmedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinmediumitalic.woff2") format("woff2"), url("../fonts/Librefranklinmediumitalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinitalic.woff2") format("woff2"), url("../fonts/Librefranklinitalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinthin.woff2") format("woff2"), url("../fonts/Librefranklinthin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinextralightitalic.woff2") format("woff2"), url("../fonts/Librefranklinextralightitalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinextralight.woff2") format("woff2"), url("../fonts/Librefranklinextralight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinlight.woff2") format("woff2"), url("../fonts/Librefranklinlight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklin.woff2") format("woff2"), url("../fonts/Librefranklin.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinblack.woff2") format("woff2"), url("../fonts/Librefranklinblack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinsemibolditalic.woff2") format("woff2"), url("../fonts/Librefranklinsemibolditalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinbolditalic.woff2") format("woff2"), url("../fonts/Librefranklinbolditalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinthinitalic.woff2") format("woff2"), url("../fonts/Librefranklinthinitalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinbold.woff2") format("woff2"), url("../fonts/Librefranklinbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinblackitalic.woff2") format("woff2"), url("../fonts/Librefranklinblackitalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinextrabold.woff2") format("woff2"), url("../fonts/Librefranklinextrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinlightitalic.woff2") format("woff2"), url("../fonts/Librefranklinlightitalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url("../fonts/Librefranklinextrabolditalic.woff2") format("woff2"), url("../fonts/Librefranklinextrabolditalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+
+.header {
+  background: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 93px 0 240px 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 0;
+    padding: 48px 0 90px 0;
+    background-size: auto;
+  }
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav-heading a {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  font-style: normal;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .header__nav-heading a {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    font-style: normal;
+  }
+}
+
+.header__nav-heading a:hover {
+  color: #C66C49;
+}
+
+.header__nav-menu {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__nav-item {
+  list-style: none;
+}
+
+.header__nav-item a {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  font-style: normal;
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .header__nav-item a {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.header__nav-item a:hover {
+  color: #C66C49;
+}
+
+.header__heading {
+  font-size: 64px;
+  line-height: 78px;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  margin: 145px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .header__heading {
+    font-size: 42px;
+    line-height: 54px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 90px 0 0 0;
+  }
+}
+
+.header__subheading {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  font-style: normal;
+  color: #FFFFFF;
+  margin: 26px 0 106px 0;
+}
+
+@media (max-width: 768px) {
+  .header__subheading {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px 0 48px 0;
+  }
+}
+
+.header__link {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.header__link:hover {
+  color: #C66C49;
+}
+
+.about {
+  padding: 93px 0 115px 0;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 93px 0 46px 0;
+  }
+}
+
+.about__heading {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+  margin: 0 0 38px 0;
+}
+
+.about__text {
+  margin: 38px 0 38px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+}
+
+.skills {
+  background: #FFFAF2;
+  padding: 93px 0 145px 0;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 93px 0 93px 0;
+  }
+}
+
+.skills__heading {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+}
+
+.skills__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .skills__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.skills__img {
+  margin: 86px 0 0 0;
+}
+
+.skills__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -ms-grid-rows: 85px (45px)[6];
+      grid-template-rows: 85px repeat(6, 45px);
+  margin: 86px 0 0 0;
+}
+
+.skills__grid-item {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  font-style: normal;
+  height: 20px;
+}
+
+.skills__grid-description {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  font-style: normal;
+  height: 20px;
+}
+
+.portfolio {
+  padding: 93px 0 145px 0;
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 93px 0 93px 0;
+  }
+}
+
+.portfolio__heading {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+}
+
+.portfolio__subheading {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+  margin: 86px 0 0 0;
+}
+
+.portfolio__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 48px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .portfolio__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.portfolio__text {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 350px;
+}
+
+.portfolio__text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 403px;
+}
+
+@media (max-width: 768px) {
+  .portfolio__text-wrapper {
+    min-height: 200px;
+  }
+}
+
+.portfolio__text-icon {
+  margin: 0 14px 0 0;
+}
+
+.portfolio__text-icon:hover {
+  color: #C66C49;
+}
+
+@media (max-width: 768px) {
+  .portfolio__text-icons {
+    margin: 0 0 20px 0;
+  }
+}
+
+.portfolio__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 635px;
+  min-height: 403px;
+}
+
+@media (max-width: 768px) {
+  .portfolio__images {
+    min-width: 100%;
+    min-height: 388px;
+  }
+}
+
+.portfolio__images-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer {
+  background: #FFFAF2;
+}
+
+.footer__wrapper {
+  padding: 93px 0 95px 0;
+}
+
+.footer__heading {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  font-style: normal;
+  color: #333333;
+}
+
+.footer__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  margin: 51px 0 0 0;
+}
+
+.footer__list-item {
+  margin: 14px 0 0 0;
+}
+
+.footer__list-link {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+}
+
+.footer__list-link:hover {
+  color: #C66C49;
+}
+
+.footer__uparrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0 0 70px 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer__uparrow a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.footer__uparrow a:hover {
+  color: #C66C49;
+}
+/*# sourceMappingURL=style.css.map */
