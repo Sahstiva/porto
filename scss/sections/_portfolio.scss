@@ -113,7 +113,12 @@
         }
 
         &-big {
-            height: 59%;
+            height: 58%;
+            width: 100%;
+
+            @include tablet {
+                height: 59%;
+            }
 
             @include mobile {
                 height: 58%;
@@ -122,7 +127,12 @@
         }
 
         &-small {
-            height: 39%;
+            height: 36%;
+            width: 100%;
+
+            @include tablet {
+                height: 39%;
+            }
 
             @include mobile {
                 height: 36%;

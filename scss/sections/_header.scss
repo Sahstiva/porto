@@ -24,9 +24,43 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
 
         @include mobile {
             justify-content: center;
+            width: 100%;
+        }
+
+        &-button {
+            display: none;
+            background: transparent;
+            border: none;
+
+            @include mobile {
+                display: block;
+                position: relative;
+            }
+        }
+
+        &-button::before {
+            content: url('/img/burger.svg');
+            fill: $white-color;
+            position: absolute;
+            left: -70px;
+            top: -10px;
+        }
+
+        &-mobile {
+            display: none;
+            position: absolute;
+
+            @include mobile {
+                width: 320px;
+                height: 300px;
+                top: 0;
+                background: $white-color;
+                display: block;
+            }
         }
 
         &-heading a {

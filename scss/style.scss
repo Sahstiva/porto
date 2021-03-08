@@ -1,8 +1,11 @@
-@import './reset';
 @import './variables';
-@import './common';
-@import './mixins';
 @import './fonts';
+// @import './reset';
+@import './normalize';
+
+@import './mixins';
+@import './common';
+
 
 @import './sections/header';
 @import './sections/about';
